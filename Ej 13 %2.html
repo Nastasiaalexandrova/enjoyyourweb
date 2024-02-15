@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 13</title>
+</head>
+<body>
+    <p>Escribe el numero: </p>
+    <input type="number" id="numero">
+    <input type="button" onclick="resultado()" value="Check">
+    <div id="resultado"></div>
+    <script>
+            function resultado() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var resultadoDiv = document.getElementById("resultado");
+
+            if (!isNaN(numero)) { // Check if it's a valid number
+                if (numero % 2 === 0) {
+                    resultadoDiv.innerHTML = "Numero " + numero + " es par";
+                } else {
+                    resultadoDiv.innerHTML = "Numero " + numero + " es impar";
+                }
+            } else {
+                resultadoDiv.innerHTML = "Por favor, ingresa un número válido.";
+            }
+        }
+    </script>
+</body>
+</html>
